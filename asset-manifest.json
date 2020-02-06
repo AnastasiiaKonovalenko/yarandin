@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/yarandin/static/css/main.8398a5f3.chunk.css",
-    "main.js": "/yarandin/static/js/main.b3082323.chunk.js",
-    "main.js.map": "/yarandin/static/js/main.b3082323.chunk.js.map",
+    "main.js": "/yarandin/static/js/main.cc117d95.chunk.js",
+    "main.js.map": "/yarandin/static/js/main.cc117d95.chunk.js.map",
     "runtime-main.js": "/yarandin/static/js/runtime-main.3fe40ad8.js",
     "runtime-main.js.map": "/yarandin/static/js/runtime-main.3fe40ad8.js.map",
-    "static/js/2.8aff8701.chunk.js": "/yarandin/static/js/2.8aff8701.chunk.js",
-    "static/js/2.8aff8701.chunk.js.map": "/yarandin/static/js/2.8aff8701.chunk.js.map",
+    "static/js/2.043ee8a0.chunk.js": "/yarandin/static/js/2.043ee8a0.chunk.js",
+    "static/js/2.043ee8a0.chunk.js.map": "/yarandin/static/js/2.043ee8a0.chunk.js.map",
     "index.html": "/yarandin/index.html",
-    "precache-manifest.7e683c528284a24dc6bcd18f9facb594.js": "/yarandin/precache-manifest.7e683c528284a24dc6bcd18f9facb594.js",
+    "precache-manifest.bff711b189130c7f7562ebb34afd0d90.js": "/yarandin/precache-manifest.bff711b189130c7f7562ebb34afd0d90.js",
     "service-worker.js": "/yarandin/service-worker.js",
     "static/css/main.8398a5f3.chunk.css.map": "/yarandin/static/css/main.8398a5f3.chunk.css.map",
-    "static/js/2.8aff8701.chunk.js.LICENSE.txt": "/yarandin/static/js/2.8aff8701.chunk.js.LICENSE.txt",
+    "static/js/2.043ee8a0.chunk.js.LICENSE.txt": "/yarandin/static/js/2.043ee8a0.chunk.js.LICENSE.txt",
     "static/media/App.scss": "/yarandin/static/media/Spinner-1s-200px.be7c8377.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.3fe40ad8.js",
-    "static/js/2.8aff8701.chunk.js",
+    "static/js/2.043ee8a0.chunk.js",
     "static/css/main.8398a5f3.chunk.css",
-    "static/js/main.b3082323.chunk.js"
+    "static/js/main.cc117d95.chunk.js"
   ]
 }
