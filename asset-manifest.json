@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/yarandin/static/css/main.8398a5f3.chunk.css",
-    "main.js": "/yarandin/static/js/main.cc117d95.chunk.js",
-    "main.js.map": "/yarandin/static/js/main.cc117d95.chunk.js.map",
+    "main.js": "/yarandin/static/js/main.ec2cd824.chunk.js",
+    "main.js.map": "/yarandin/static/js/main.ec2cd824.chunk.js.map",
     "runtime-main.js": "/yarandin/static/js/runtime-main.3fe40ad8.js",
     "runtime-main.js.map": "/yarandin/static/js/runtime-main.3fe40ad8.js.map",
     "static/js/2.043ee8a0.chunk.js": "/yarandin/static/js/2.043ee8a0.chunk.js",
     "static/js/2.043ee8a0.chunk.js.map": "/yarandin/static/js/2.043ee8a0.chunk.js.map",
     "index.html": "/yarandin/index.html",
-    "precache-manifest.bff711b189130c7f7562ebb34afd0d90.js": "/yarandin/precache-manifest.bff711b189130c7f7562ebb34afd0d90.js",
+    "precache-manifest.348fde94eb462b18dd1251ec1a37100b.js": "/yarandin/precache-manifest.348fde94eb462b18dd1251ec1a37100b.js",
     "service-worker.js": "/yarandin/service-worker.js",
     "static/css/main.8398a5f3.chunk.css.map": "/yarandin/static/css/main.8398a5f3.chunk.css.map",
     "static/js/2.043ee8a0.chunk.js.LICENSE.txt": "/yarandin/static/js/2.043ee8a0.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.3fe40ad8.js",
     "static/js/2.043ee8a0.chunk.js",
     "static/css/main.8398a5f3.chunk.css",
-    "static/js/main.cc117d95.chunk.js"
+    "static/js/main.ec2cd824.chunk.js"
   ]
 }
