@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useHistory } from 'react-router-dom';
 import debounce from 'lodash/debounce';
 
 const Home = ({ films }) => {
   const [visibleQuery, setVisibleQuery] = useState('');
   const [searchQuery, setSearchQuery] = useState('');
   const debouncedSetQuery = debounce(setSearchQuery, 1000);
+  const location = useLocation();
+  const history = useHistory();
 
   const handleChangeQuery = (evt) => {
     debouncedSetQuery(evt.target.value);
@@ -18,7 +20,38 @@ const Home = ({ films }) => {
     : films.filter((item) => item.title.toLowerCase()
       .includes(searchQuery.toLowerCase()));
 
-  const sortedFilms = [...filmsAfterQuery];
+
+  const searchParams = new URLSearchParams(location.search);
+
+  let sortedFilms = '';
+
+  const sortParam = searchParams.get('sort');
+
+  if (sortParam) {
+    sortedFilms = (typeof films[0][sortParam] === 'number'
+            || typeof films[0][sortParam] === 'boolean')
+      ? [...filmsAfterQuery]
+        .sort((a, b) => (a[sortParam] - b[sortParam])
+                    * (searchParams.get('orderOfSorting') === 'asc' ? 1 : -1))
+      : [...filmsAfterQuery]
+        .sort((a, b) => (a[sortParam].localeCompare(b[sortParam]))
+                    * (searchParams.get('orderOfSorting') === 'asc' ? 1 : -1));
+  } else {
+    sortedFilms = filmsAfterQuery;
+  }
+
+  const sortFilms = (param) => {
+    searchParams.set('sort', param);
+
+    if (searchParams.get('sort') === param
+            && searchParams.get('orderOfSorting') === 'asc') {
+      searchParams.set('orderOfSorting', 'desc');
+    } else {
+      searchParams.set('orderOfSorting', 'asc');
+    }
+
+    history.push({ search: searchParams.toString() });
+  };
 
   return (
     <main className="main">
@@ -38,7 +71,7 @@ const Home = ({ films }) => {
         <button
           className="button"
           type="button"
-          onClick={() => sortedFilms.sort((a, b) => a.title.localeCompare(b.title))}
+          onClick={() => sortFilms('title')}
         >
           Sort
         </button>
@@ -48,7 +81,7 @@ const Home = ({ films }) => {
           <Link
             to={`/${film.episode_id}`}
             className="films__link"
-            key={film.episode_id}
+            key={film.title}
           >
             <article
               className="films__article"
