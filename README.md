@@ -1,1 +1,1 @@
-[DEMO](https://anastasiiakonovalenko.github.io/yarandin/)
+[DEMO](https://anastasiiakonovalenko.github.io/yarandin/index.html)
