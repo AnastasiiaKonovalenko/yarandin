@@ -1,5 +1,6 @@
 {
   "name": "test_yarandin_starwars",
+  "homepage": "https://anastasiiakonovalenko.github.io/yarandin/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
