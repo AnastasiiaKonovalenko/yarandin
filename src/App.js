@@ -1,22 +1,43 @@
-import React, {useState, useEffect} from 'react';
-import { getData } from "./api/dataApi";
+import React, { useState, useEffect } from 'react';
+import { Switch, Route } from 'react-router-dom';
+import GetData from './api/dataApi';
+import Home from './components/home/home';
+import Episode from './components/Episode/episode';
 
 const App = () => {
   const [films, setFilms] = useState([]);
-  const filmsFromServer = new getData();
+  const filmsFromServer = new GetData();
 
   useEffect(() => {
-    filmsFromServer.getAllFilms('/films/').then((data) => {
-      setFilms(data.results)
+    filmsFromServer.getAll('/films/').then((data) => {
+      setFilms(data.results);
     });
-  });
+  }, []);
 
 
-    return (
-      <div className="App">
-          {films.map(film => <p>{film.title}</p>)}
-      </div>
-    );
+  return (
+    <Switch>
+      <Route exact path="/">
+        <Home
+          films={films}
+        />
+      </Route>
+
+      <Route
+        path="/:id"
+        render={({ match }) => {
+          const { id } = match.params;
+          return (
+            <Episode
+              id={id}
+              films={JSON.stringify(films)}
+            />
+          );
+        }}
+      />
+
+    </Switch>
+  );
 };
 
 export default App;

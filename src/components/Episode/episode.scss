@@ -1,0 +1,43 @@
+.section_spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.spinner {
+  width: 100px;
+  height: 100px;
+  background: url("../../icons/Spinner-1s-200px.svg");
+}
+
+.episode {
+  height: 100vh;
+}
+
+.film {
+ text-align: center;
+  padding: 40px 200px;
+
+  &__paragraph span {
+    color: #00a379;
+  }
+
+  &__text {
+    font-size: 26px;
+  }
+}
+
+.details {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  &__block {
+    padding: 40px;
+  }
+
+  &__head {
+    color: #00a379;
+  }
+}

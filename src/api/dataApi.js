@@ -1,19 +1,18 @@
-const _apiBase = 'https://swapi.co/api';
+const apiBase = 'https://swapi.co/api';
 
-export class getData {
-     async getResource(URL) {
-        const res = await fetch(`${_apiBase}${URL}`);
-        if(!res.ok) {
-            throw new Error('Could not fetch')
-        }
-
-        return await res.json()
+class GetData {
+  async getResource(URL) {
+    const res = await fetch(`${apiBase}${URL}`);
+    if (!res.ok) {
+      throw new Error('Could not fetch');
     }
 
-    getAllFilms(URL) {
-        return this.getResource(URL)
-    }
+    return res.json();
+  }
+
+  getAll(URL) {
+    return this.getResource(URL);
+  }
 }
 
-
-
+export default GetData;
