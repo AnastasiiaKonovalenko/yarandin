@@ -54,48 +54,56 @@ const Home = ({ films }) => {
   };
 
   return (
-    <main className="main">
-      <div className="stars" />
-      <div className="clouds" />
-      <h1 className="main__heading">
-        Star wars universe
-      </h1>
-      <div className="main__search">
-        <input
-          type="text"
-          placeholder="Search..."
-          value={visibleQuery}
-          onChange={handleChangeQuery}
-        />
+    <>
+      {films.length !== 0 ? (
+        <main className="main">
+          <div className="stars" />
+          <div className="clouds" />
+          <h1 className="main__heading">
+            Star wars universe
+          </h1>
+          <div className="main__search">
+            <input
+              type="text"
+              placeholder="Search..."
+              value={visibleQuery}
+              onChange={handleChangeQuery}
+            />
 
-        <button
-          className="button"
-          type="button"
-          onClick={() => sortFilms('title')}
-        >
-          Sort
-        </button>
-      </div>
-      <section className="films">
-        {sortedFilms.map((film) => (
-          <Link
-            to={`/${film.episode_id}`}
-            className="films__link"
-            key={film.title}
-          >
-            <article
-              className="films__article"
+            <button
+              className="button"
+              type="button"
+              onClick={() => sortFilms('title')}
             >
-              <h2
-                className="films__heading"
+              Sort
+            </button>
+          </div>
+          <section className="films">
+            {sortedFilms.map((film) => (
+              <Link
+                to={`/${film.episode_id}`}
+                className="films__link"
+                key={film.title}
               >
-                {film.title}
-              </h2>
-            </article>
-          </Link>
-        ))}
-      </section>
-    </main>
+                <article
+                  className="films__article"
+                >
+                  <h2
+                    className="films__heading"
+                  >
+                    {film.title}
+                  </h2>
+                </article>
+              </Link>
+            ))}
+          </section>
+        </main>
+      ) : (
+        <section className="section_spinner">
+          <div className="spinner" />
+        </section>
+      )}
+    </>
   );
 };
 
